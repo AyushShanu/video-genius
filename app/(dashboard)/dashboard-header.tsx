@@ -4,13 +4,13 @@ import { Bell, Crown, Search } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { SidebarTrigger } from "@/components/ui/sidebar"
+
 
 export function DashboardHeader() {
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-900/50 backdrop-blur-sm border-b border-gray-800">
+    <header className="flex items-center justify-between p-4 bg-gray-900 backdrop-blur-sm border-b border-gray-800">
       <div className="flex items-center gap-4">
-        <SidebarTrigger className="text-gray-400 hover:text-white" />
+
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
           <Input
@@ -21,11 +21,11 @@ export function DashboardHeader() {
       </div>
 
       <div className="flex items-center gap-3">
-        <Button variant="outline" className="bg-orange-600 hover:bg-orange-700 text-white border-orange-600">
+        <Button variant="ghost" className="text-gray-400 hover:text-black">
           <Crown className="h-4 w-4 mr-2" />
           Upgrade to Pro
         </Button>
-        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-black">
           <Bell className="h-5 w-5" />
         </Button>
         <Avatar className="h-8 w-8">

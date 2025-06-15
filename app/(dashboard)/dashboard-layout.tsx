@@ -2,10 +2,13 @@
 
 import { SidebarProvider } from "@/components/ui/sidebar"
 import { DashboardHeader } from "./dashboard-header"
-import { DashboardContent } from "./dashboard-content"
-import { DashboardSidebar } from "./dashboard-sidebar"
+import DashboardSidebar from "./dashboard-sidebar"
 
-export function DashboardLayout() {
+interface DashboardLayoutProps {
+  children: React.ReactNode
+}
+
+export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <div className="min-h-screen bg-gray-950">
       <SidebarProvider defaultOpen={false}>
@@ -13,7 +16,7 @@ export function DashboardLayout() {
           <DashboardSidebar />
           <div className="flex-1 flex flex-col overflow-hidden">
             <DashboardHeader />
-            <DashboardContent />
+            {children} {/* Inject content dynamically */}
           </div>
         </div>
       </SidebarProvider>

@@ -1,8 +1,11 @@
-"use client"
+import { DashboardContent } from "./(dashboard)/dashboard-content";
+import { DashboardLayout } from "./(dashboard)/dashboard-layout";
 
-import { DashboardLayout } from "./components/dashboard-layout"
 
-
-export default function ModernDashboard() {
-  return <DashboardLayout />
+export default function Page() {
+  return (
+    <DashboardLayout>
+      <DashboardContent />
+    </DashboardLayout>
+  )
 }
